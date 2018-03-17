@@ -1,0 +1,17 @@
+@import './../styles/_config';
+
+.container {
+  padding: 12px;
+
+  @media (min-width: 1024px) {
+    padding-left: 265px;
+  }
+}
+
+header {
+  border-bottom: 1px solid $color-grey;
+}
+
+main {
+  padding: 12px 0;
+}
