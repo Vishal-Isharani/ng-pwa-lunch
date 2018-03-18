@@ -2,6 +2,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 
+import { SearchService } from './services/search.service';
+import { LocationService } from './services/location.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,7 +18,8 @@ export class CoreModule {
     return {
       ngModule: CoreModule,
       providers: [
-
+        SearchService,
+        LocationService
       ],
     };
   }

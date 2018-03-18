@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,14 +6,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  form: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit() {
-    this.form = this.formBuilder.group({
-      search: []
-    });
+  constructor() { }
 
-    this.form.controls.search.valueChanges.subscribe(v => console.log(v));
-  }
+  ngOnInit() { }
 }

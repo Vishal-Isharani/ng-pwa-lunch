@@ -24,6 +24,8 @@
     "@angular/service-worker": "^5.2.0",
     "blueprint-css": "^3.0.0-beta.4",
     "core-js": "^2.4.1",
+    "ngx-input-star-rating": "0.0.2",
+    "ngx-loaders": "0.0.0",
     "ngx-nav-drawer": "0.0.1",
     "normalize.css": "^8.0.0",
     "rxjs": "^5.5.6",

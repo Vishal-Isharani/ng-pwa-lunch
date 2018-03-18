@@ -1,0 +1,11 @@
+app-home {
+  address {
+    margin-bottom: 4px;
+  }
+  
+  ngx-input-star-rating {
+    button:first-child {
+      padding-left: 0;
+    }
+  }
+}

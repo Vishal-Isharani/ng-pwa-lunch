@@ -6,6 +6,7 @@
 /tmp
 /out-tsc
 /functions/node_modules
+/functions/.runtimeconfig.json
 
 # dependencies
 /node_modules

@@ -1,17 +1,51 @@
-@import './../styles/_config';
+@import "./../styles/_config";
 
 .container {
-  padding: 12px;
-
-  @media (min-width: 1024px) {
-    padding-left: 265px;
+  @media (min-width: $menu-break) {
+    padding-left: 250px;
   }
 }
 
 header {
-  border-bottom: 1px solid $color-grey;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 4px 2px;
+  min-height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+
+  @media (min-width: $menu-break) {
+    padding-left: 265px;
+  }
+
+  h2 {
+    margin: 6px 0 0 0;
+  }
+
+  button {
+    float: left;
+    padding: 4px;
+    min-width: 54px;
+    background: transparent;
+    border: 0;
+    color: $color-white;
+    font-size: 2em;
+
+    @media (min-width: $menu-break) {
+      display: none;
+    }
+  }
 }
 
 main {
-  padding: 12px 0;
+  padding: 60px 8px 8px 8px;
+
+  @media (min-width: $menu-break) {
+    padding: 65px 12px 12px 12px;
+  }
 }
