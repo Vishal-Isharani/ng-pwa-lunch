@@ -7,3 +7,12 @@ body {
 h1, h2, h3 {
   margin: 0 0 12px 0;
 }
+
+a {
+  font-style: normal;
+  color: $color-text;
+}
+
+address {
+  font-style: normal;
+}

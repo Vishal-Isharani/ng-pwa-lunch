@@ -5,13 +5,16 @@
   </label>
 </form> -->
 
-<section *ngIf="results | async; let results; else loading" class="list">
-  <a *ngFor="let result of results" [routerLink]="[result.place_id]" rel="noopener">
-    <h2>{{result.name}}</h2>
+<section *ngIf="restaurants | async; let restaurants; else loading;" class="list">
+  <a *ngFor="let r of restaurants; let first = first;" [routerLink]="[r.id]" rel="noopener">
+    <h2>
+      {{r.name}}
+      <small *ngIf="first"> (random suggestion)</small>
+    </h2>
     <address>
-      {{result.vicinity}}
+      {{r.address}}
     </address>
-    <ngx-input-star-rating [value]="result.rating" [disabled]="true"></ngx-input-star-rating>
+    <ngx-input-star-rating [value]="r.rating" [disabled]="true"></ngx-input-star-rating>
   </a>
 </section>
 

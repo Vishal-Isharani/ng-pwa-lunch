@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { switchMap, tap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 
-import { SearchService, Result } from './../../common/core/services/search.service';
+import { RestaurantService, Restaurant } from './../../common/core/services/restaurant.service';
 
 @Component({
   selector: 'app-restaurant-view',
@@ -11,17 +11,16 @@ import { SearchService, Result } from './../../common/core/services/search.servi
   styleUrls: ['./restaurant-view.component.scss']
 })
 export class RestaurantViewComponent implements OnInit {
-  restaurant: Observable<Result>;
+  restaurant: Observable<Restaurant>;
+
   constructor(
     private activatedRoute: ActivatedRoute,
-    private searchService: SearchService
+    private restaurantService: RestaurantService
   ) { }
 
   ngOnInit() {
     this.restaurant = this.activatedRoute.params.pipe(
-      tap(i => console.log(i)),
-      switchMap(params => this.searchService.loadById(params['id']))
+      switchMap(params => this.restaurantService.load(params['id']))
     );
   }
-
 }

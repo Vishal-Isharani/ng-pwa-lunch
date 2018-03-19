@@ -1,4 +1,4 @@
-@import "./../styles/_config";
+@import './../styles/_config';
 
 .container {
   @media (min-width: $menu-break) {
@@ -20,7 +20,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 
   @media (min-width: $menu-break) {
-    padding-left: 265px;
+    padding: 10px 2px 18px 265px;
   }
 
   h2 {
@@ -43,9 +43,9 @@ header {
 }
 
 main {
-  padding: 60px 8px 8px 8px;
+  padding: 65px 8px 8px 8px;
 
   @media (min-width: $menu-break) {
-    padding: 65px 12px 12px 12px;
+    padding: 75px 12px 12px 12px;
   }
 }

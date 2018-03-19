@@ -1,0 +1,34 @@
+[debug] [2018-03-19T04:43:54.044Z] ----------------------------------------------------------------------
+[debug] [2018-03-19T04:43:54.047Z] Command:       /usr/bin/node /home/cory/.npm-global/bin/firebase serve --only functions
+[debug] [2018-03-19T04:43:54.047Z] CLI Version:   3.17.6
+[debug] [2018-03-19T04:43:54.047Z] Platform:      linux
+[debug] [2018-03-19T04:43:54.047Z] Node Version:  v9.8.0
+[debug] [2018-03-19T04:43:54.047Z] Time:          Sun Mar 18 2018 23:43:54 GMT-0500 (CDT)
+[debug] [2018-03-19T04:43:54.047Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-19T04:43:54.059Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-19T04:43:54.059Z] > authorizing via signed-in user
+[debug] [2018-03-19T04:43:54.062Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ng-pwa-lunch  
+  
+ Sun Mar 18 2018 23:43:54 GMT-0500 (CDT)
+[debug] [2018-03-19T04:43:54.439Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-19T04:43:54.442Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ng-pwa-lunch/tokens  
+  
+ Sun Mar 18 2018 23:43:54 GMT-0500 (CDT)
+[debug] [2018-03-19T04:43:54.904Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-19T04:43:54.905Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/ng-pwa-lunch  
+  
+ Sun Mar 18 2018 23:43:54 GMT-0500 (CDT)
+[debug] [2018-03-19T04:43:55.199Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/cory/Documents/repos/ng-pwa-lunch'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-03-19T04:43:56.121Z] Fetching environment
+[debug] [2018-03-19T04:43:56.125Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/19538170769:getServerAppConfig  
+  
+ Sun Mar 18 2018 23:43:56 GMT-0500 (CDT)
+[debug] [2018-03-19T04:43:56.586Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-19T04:43:56.586Z] Starting @google-cloud/functions-emulator
+[debug] [2018-03-19T04:43:58.628Z] Parsing function triggers
+[info] ✔  functions: api: http://localhost:5000/ng-pwa-lunch/us-central1/api

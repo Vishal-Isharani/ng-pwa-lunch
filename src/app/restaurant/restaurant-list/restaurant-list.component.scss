@@ -6,8 +6,10 @@
   margin-top: 6px;
 }
 
-ngx-loading-spinner {
-  margin: 48px auto;
-  width: 100px;
-  display: block;
+.list > a:first-of-type {
+  background-color: #fff6c6;
+}
+
+ngx-input-star-rating {
+  margin: 4px 0 0 -5px;
 }

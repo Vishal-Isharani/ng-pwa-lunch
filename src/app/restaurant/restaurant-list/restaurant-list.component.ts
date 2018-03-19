@@ -2,7 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 
-import { SearchService, Result } from './../../common/core/services/search.service';
+import { RestaurantService, Restaurant } from './../../common/core/services/restaurant.service';
+import { shareReplay, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-restaurant-list',
@@ -11,11 +12,11 @@ import { SearchService, Result } from './../../common/core/services/search.servi
 })
 export class RestaurantListComponent implements OnInit {
   form: FormGroup;
-  results: Observable<Result[]>;
+  restaurants: Observable<Restaurant[]>;
 
   constructor(
     private formBuilder: FormBuilder,
-    private searchService: SearchService
+    private restaurantService: RestaurantService
   ) { }
 
   ngOnInit() {
@@ -23,9 +24,12 @@ export class RestaurantListComponent implements OnInit {
       search: []
     });
 
-    this.form.controls.search.valueChanges.subscribe(v => console.log(v));
-
-    // this.results = this.searchService.searchByTerm('thai');
-    this.results = this.searchService.searchByGeoLocation();
+    this.restaurants = this.restaurantService.searchByGeoLocation().pipe(
+      shareReplay(),
+      map(r => {
+        r.unshift(r[Math.floor(Math.random() * r.length)]);
+        return r;
+      })
+    );
   }
 }
