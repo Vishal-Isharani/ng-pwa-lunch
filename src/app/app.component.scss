@@ -1,4 +1,4 @@
-@import './../styles/_config';
+@import "./../styles/_config";
 
 .container {
   @media (min-width: $menu-break) {
@@ -46,5 +46,31 @@ main {
 
   @media (min-width: $menu-break) {
     padding: 75px 12px 12px 12px;
+  }
+}
+
+.update-prompt {
+  padding: 16px;
+  color: $color-white;
+  background-color: $color-grey-dark;
+  text-align: left;
+  max-width: 400px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  line-height: 1.5em;
+  z-index: 1000;
+
+  @media (min-width: 400px) {
+    left: calc(50% - 200px);
+  }
+
+  button {
+    float: right;
+    border: 0;
+    background: transparent;
+    color: $color-white;
+    padding: 4px;
   }
 }

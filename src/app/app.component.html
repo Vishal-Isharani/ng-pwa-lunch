@@ -20,6 +20,11 @@
     <i class="icon-location"></i>
   </button>
 
+  <div *ngIf="showUpdatePrompt | async" class="update-prompt">
+    An update is available.
+    <button (click)="update()">Update</button>
+  </div>
+
   <!-- <footer>
     Cory Rylan 2018
   </footer> -->

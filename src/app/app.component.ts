@@ -1,4 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
+import { Observable } from 'rxjs/Observable';
+import { startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +11,13 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 })
 export class AppComponent {
   showMenu = false;
+  showUpdatePrompt: Observable<any>;
 
-  constructor() { }
+  constructor(private swUpdate: SwUpdate) {
+    this.showUpdatePrompt = this.swUpdate.available;
+  }
+
+  update() {
+    window.location.reload();
+  }
 }
